@@ -29,7 +29,7 @@ def job():
             latency = str(data["server"]["latency"])
         
             if data["download"]/1000000 < speed: ## tweet if speed is less than expected
-                status = api.PostUpdate("my speed is sloooooow "+ download_speed[:5]  +" mbps @zuku_wecare A/c 104793 ... cc @kmarima")
+                status = api.PostUpdate("my speed is sloooooow "+ download_speed[:5]  +" mbps")
             else: ## tweet if everything os ok
                 status = api.PostUpdate("My speed is ok "+ download_speed[:5] + "mbps")
         except Exception as e:
